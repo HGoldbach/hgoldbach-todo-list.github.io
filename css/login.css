@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+:root {
+    --ff: 'Teko', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+header {
+    grid-column: 1 / 3;
+    justify-self: flex-end;
+    margin: 1rem 8vw 0 0;
+}
+
+.list-items {
+    list-style: none;
+    font-family: var(--ff);
+    text-align: center;
+}
+
+.list-items li {
+    background-color: rgb(12, 6, 68);
+    padding: .5rem;
+    font-size: 1.125rem;
+    box-shadow: 0 2px 10px rgb(4, 1, 32);
+    width: 10vw;
+    transition: .7s;
+    border-radius: .2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .list-items li {
+        width: 15vw;
+        font-size: .9rem;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    .list-items li {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .list-items li {
+        width: 25vw;
+        font-size: .8rem;
+    }
+}
+
+
+
+.list-items li:hover {
+    background-color: orangered;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: var(--ff);
+    text-transform: uppercase;
+    font-size: 5rem;
+    grid-column: 1 / 3;
+    margin-top: 3rem;
+}
+
+form {
+    text-transform: uppercase;
+    font-family: var(--ff);
+    
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+input, button {
+    border: none;
+    font-family: inherit;
+    font-size: 1.125rem;
+    border-radius: .4rem;
+    text-align: center;
+    color: whitesmoke;
+    text-transform: inherit;
+    margin: 1em 0 .1em;
+}
+
+input {
+    min-width: 30vw;
+    width: 35vw;
+    min-height: 25px;
+    max-height: 40px;
+    padding: 1rem;
+    outline: none;
+    background-color: rgb(4, 1, 32);
+    box-shadow: 0px 2px 10px rgb(4, 1, 32);
+}
+
+input::placeholder {
+    opacity: .3;
+}
+
+button {
+    width: 7vw;
+    height: 2rem;
+    background-color: orangered;
+    box-shadow: 0px 2px 10px orangered;
+    cursor: pointer;
+    transition: .6s;
+}
+
+button:hover {
+    background-color: orange;
+    box-shadow: 0 2px 10px orange;
+}
+
+.login-form {
+    text-align: end;
+}
+
+.reg-button {
+    width: 12vw;
+}
+
+
+@media screen and (max-width: 750px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 10vw;
+    }
+    h2 {
+        font-size: 5.5vw;
+    }
+
+    .login-form h2 {
+        margin-top: 3rem;
+    }
+
+    .login-form, .register-form {
+        text-align: start;
+        grid-column: 1 / 2;
+        margin: 1rem 0;
+    }
+    
+    .login-form {
+        border-bottom: 2px solid rgb(4, 1, 32);
+        border-top: 2px solid rgb(4, 1, 32);
+    }
+
+    input {
+        width: 65vw;
+        font-size: 1.05rem;
+    }
+
+    button {
+        margin-bottom: 4rem;
+        width: 15vw;
+    }
+    .reg-button {
+        width: 25vw;
+    }
+    
+}
+

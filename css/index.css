@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+:root {
+    --fs-400: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    background-color: #f5f5f5;
+}
+
+.message {
+    color: rgb(4, 1, 32);
+    text-align: center;
+    margin-top: 20vh;
+}
+
+header {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.list-items {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    justify-content: end;
+}
+
+.list-items li {
+    background-color: rgb(12, 6, 68);
+    padding: .5rem;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 10px rgb(4, 1, 32);
+    width: 10vw;
+    transition: .7s;
+    border-radius: .2rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .list-items li {
+        width: 16vw;
+        font-size: 1rem;
+    }    
+}
+
+@media screen and (max-width: 480px) {
+    .list-items li {
+        width: 20vw;
+        font-size: .8rem;
+    }    
+}
+
+
+
+.list-items li:hover {
+    background-color: orangered;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+header h1 {
+    font-size: 7rem;
+    opacity: .8;
+    color: rgb(4, 1, 32);
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+    header h1 {
+        font-size: 17vw;
+    }
+    
+}
+
+header #user-input, header #btn {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.3rem;
+    border-radius: .2rem;
+    height: 3rem;
+    border-color: rgb(45, 48, 51);
+    margin-top: 2rem;
+}
+
+header #user-input {
+    padding-left: 1.5rem;
+    min-width: 300px;
+    max-width: 500px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 10px rgb(4, 1, 32);
+}
+
+#user-input::placeholder {
+    opacity: .4;
+}
+
+header #btn {
+    min-width: 130px;
+    max-width: 300px;  
+    background-color: orangered;
+    color: whitesmoke;
+    transition: 1s;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 2px 10px orangered;
+    transition: .7s;
+}
+
+header #btn:hover {
+    background-color: rgb(7, 2, 54);
+    box-shadow: 0 2px 10px rgb(4, 1, 32);
+}
+
+@media screen and (max-width: 580px) {
+    header #user-input {
+        min-width: 150px;
+        max-width: 350px;
+        font-size: 1rem;
+        padding-left: .5rem;
+    }
+    header #btn {
+        min-width: 100px;
+        max-width: 230px;
+        font-size: 1rem;
+    }
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 30vw));
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 0;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+    main  {
+        grid-template-columns: 1fr;  
+    } 
+    main .columns {
+        width: 80vw;
+        justify-self: center;
+    }
+}
+    
+
+main div {
+    background-color: rgb(4, 1, 32);
+    width: 30vw;
+    min-height: 100px;
+    border-radius: .5rem;
+    box-shadow: 0 2px 10px rgb(4, 1, 32);
+}
+
+main div p {
+    font-size: var(--fs-400);
+    text-align: center;
+    color: lightcyan;
+    line-height: 1.3rem;
+    padding: 1rem;
+    
+}
+
+main div ul {
+    list-style: none;
+    margin: 10px auto 20px;
+    padding: 0 1rem;
+    word-wrap: break-word;
+}
+
+
+ul li {
+    color: rgb(4, 1, 32);
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0;
+    border-radius: .2rem;
+    padding: .4rem;
+    cursor: pointer;
+    border: none;
+}

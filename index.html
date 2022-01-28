@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>TODO LIST</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="list-items">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Criar conta</a></li>
+            </ul>            
+        </nav>
+        <h1>Lista de Tarefas</h1>
+        <input type="text" name="field" id="user-input" placeholder="Qual tarefa precisa ser feita?">
+        <button id="btn">Adicionar</button>
+    </header>
+    <main>
+        <div class="columns">
+            <p>Tarefas Adicionadas</p>
+            <ul class="fazer"></ul>
+        </div>
+        <div class="columns">
+            <p>Tarefas em Andamento</p>
+            <ul class="fazendo"></ul>
+        </div>
+        <div class="columns">
+            <p>Tarefas Concluídas</p>
+            <ul class="concluido"></ul>
+        </div>
+    </main>
+    <p class="message">Para excluir uma tarefa aperte o botão direito do mouse!</p>
+    <script src="/js/script.js"></script>
+</body>
+</html>
