@@ -24,59 +24,20 @@ header {
     text-align: center;
 }
 
-.list-items {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    justify-content: end;
-}
+header p {
+    color: red;
+    font-size: 1.5rem;
+    margin-bottom: -20px;
+    opacity: 0;
+    transition: .3s;
 
-.list-items li {
-    background-color: rgb(12, 6, 68);
-    padding: .5rem;
-    font-size: 1.3rem;
-    box-shadow: 0 2px 10px rgb(4, 1, 32);
-    width: 10vw;
-    transition: .7s;
-    border-radius: .2rem;
-}
-
-
-@media screen and (max-width: 1000px) {
-    .list-items li {
-        width: 16vw;
-        font-size: 1rem;
-    }    
-}
-
-@media screen and (max-width: 480px) {
-    .list-items li {
-        width: 20vw;
-        font-size: .8rem;
-    }    
-}
-
-.list-items li:hover {
-    background-color: orangered;
-}
-
-a {
-    color: whitesmoke;
-    text-decoration: none;
-}
+}  
 
 header h1 {
     font-size: 7rem;
     opacity: .8;
     color: rgb(4, 1, 32);
     margin-top: 2rem;
-}
-
-@media screen and (max-width: 650px) {
-    header h1 {
-        font-size: 17vw;
-    }
-    
 }
 
 header #user-input, header #btn {
@@ -89,12 +50,13 @@ header #user-input, header #btn {
 }
 
 header #user-input {
-    padding-left: 1.5rem;
+    padding-inline: 1.5rem;
     min-width: 300px;
     max-width: 500px;
     border: none;
     outline: none;
-    box-shadow: 0 2px 10px rgb(4, 1, 32);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.253);
+    transition: 50ms;
 }
 
 #user-input::placeholder {
@@ -119,7 +81,91 @@ header #btn:hover {
     box-shadow: 0 2px 10px rgb(4, 1, 32);
 }
 
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 30vw));
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 0;
+    margin-top: 2rem;
+}
+
+
+
+main div {
+    background-color: rgb(4, 1, 32);
+    width: 30vw;
+    min-height: 100px;
+    border-radius: .5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+main div p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: lightcyan;
+    line-height: 1.3rem;
+    padding: 1rem;
+}
+
+main div ul {
+    list-style: none;
+    margin: 10px auto 20px;
+    padding: 0 1rem;
+}
+
+
+ul li {
+    position: relative;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    color: rgb(4, 1, 32);
+    font-size: 1.7rem;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0;
+    border-radius: .2rem;
+    padding: .5rem 2.8rem .5rem .5rem;
+    cursor: pointer;
+    border: none;
+    word-break: break-all;
+}
+
+i {
+    color: rgb(255, 165, 184);
+    position: absolute;
+    right: 1rem;
+    transition: .2s ease-in-out;
+}
+
+i:hover {
+    color: rgb(255, 0, 55);
+}
+
+@media screen and (max-width: 1100px) {
+    main  {
+        grid-template-columns: 1fr;  
+    } 
+    main .column {
+        width: 80vw;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    header h1 {
+        font-size: 5rem;
+    }
+    
+}
+
 @media screen and (max-width: 580px) {
+    .user-input-erro {
+        font-size: 1.2rem;
+    }
     .tarefa-container {
         display: flex;
         flex-direction: column;
@@ -134,71 +180,11 @@ header #btn:hover {
         width: 40vw;
         font-size: 1rem;
     }
-    
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 30vw));
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1em;
-    padding: 2em 0;
-    margin-top: 2rem;
-}
-
-@media screen and (max-width: 850px) {
-    main  {
-        grid-template-columns: 1fr;  
-    } 
-    main .column {
-        width: 80vw;
-        justify-self: center;
-    }
-}
-    
-
-main div {
-    background-color: rgb(4, 1, 32);
-    width: 30vw;
-    min-height: 100px;
-    border-radius: .5rem;
-    box-shadow: 0 2px 10px rgb(4, 1, 32);
-}
-
-main div p {
-    font-size: 1.5rem;
-    text-align: center;
-    color: lightcyan;
-    line-height: 1.3rem;
-    padding: 1rem;
-    
-}
-
-main div ul {
-    list-style: none;
-    margin: 10px auto 20px;
-    padding: 0 1rem;
-    word-wrap: break-word;
-}
-
-
-ul li {
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: rgb(4, 1, 32);
-    background-color: rgb(255, 255, 255);
-    margin: 10px 0;
-    border-radius: .2rem;
-    padding: .4rem;
-    cursor: pointer;
-    border: none;
-}
-
-i {
-    color: red;
-    position: absolute;
-    right: 1rem;
+@media screen and (max-width: 480px) {
+    .list-items li {
+        width: 20vw;
+        font-size: .8rem;
+    }    
 }
