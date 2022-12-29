@@ -4,31 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/index.css">
     <title>TODO LIST</title>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul class="list-items">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">Criar conta</a></li>
-            </ul>            
-        </nav>
         <h1>Lista de Tarefas</h1>
-        <input type="text" name="field" id="user-input" placeholder="Qual tarefa precisa ser feita?">
-        <button id="btn">Adicionar</button>
+        <div class="tarefa-container">
+            <input type="text" name="field" id="user-input" placeholder="Qual tarefa precisa ser feita?">
+            <button id="btn">Adicionar</button>
+        </div>
     </header>
     <main>
-        <div class="columns">
+        <div class="column">
             <p>Tarefas Adicionadas</p>
             <ul class="fazer"></ul>
         </div>
-        <div class="columns">
+        <div class="column">
             <p>Tarefas em Andamento</p>
             <ul class="fazendo"></ul>
         </div>
-        <div class="columns">
+        <div class="column">
             <p>Tarefas Concluídas</p>
             <ul class="concluido"></ul>
         </div>

@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     font-family: 'Teko', sans-serif;
     text-transform: uppercase;
@@ -58,8 +56,6 @@ header {
     }    
 }
 
-
-
 .list-items li:hover {
     background-color: orangered;
 }
@@ -84,7 +80,7 @@ header h1 {
 }
 
 header #user-input, header #btn {
-    font-family: 'Teko', sans-serif;
+    font-family: inherit;
     font-size: 1.3rem;
     border-radius: .2rem;
     height: 3rem;
@@ -124,15 +120,18 @@ header #btn:hover {
 }
 
 @media screen and (max-width: 580px) {
+    .tarefa-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     header #user-input {
-        min-width: 150px;
-        max-width: 350px;
+        width: 60vw;
         font-size: 1rem;
         padding-left: .5rem;
     }
     header #btn {
-        min-width: 100px;
-        max-width: 230px;
+        width: 40vw;
         font-size: 1rem;
     }
     
@@ -152,7 +151,7 @@ main {
     main  {
         grid-template-columns: 1fr;  
     } 
-    main .columns {
+    main .column {
         width: 80vw;
         justify-self: center;
     }
@@ -185,6 +184,10 @@ main div ul {
 
 
 ul li {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
     color: rgb(4, 1, 32);
     background-color: rgb(255, 255, 255);
     margin: 10px 0;
@@ -192,4 +195,10 @@ ul li {
     padding: .4rem;
     cursor: pointer;
     border: none;
+}
+
+i {
+    color: red;
+    position: absolute;
+    right: 1rem;
 }
